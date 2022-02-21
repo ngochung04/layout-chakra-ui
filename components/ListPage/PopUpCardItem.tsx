@@ -11,8 +11,25 @@ import {
   PopoverContent,
   PopoverArrow,
 } from "@chakra-ui/react";
-import { Item } from "../models/CardItem";
+interface Data {
+  name: string;
+  description: string;
+  method: string;
+}
 
+interface Item {
+  id: number;
+  name: string;
+  content: string;
+  image: string;
+  percent: number;
+  time: number;
+  timeAgo: string;
+  core: number;
+  price: string;
+  type: string;
+  data: Data[];
+}
 interface Props {
   item: Item;
   ml: number;

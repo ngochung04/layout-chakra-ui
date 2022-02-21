@@ -2,8 +2,25 @@ import Slider from "react-slick";
 import "react-multi-carousel/lib/styles.css";
 import CardItem from "./CardItem";
 import { FC } from "react";
-import { Item } from "../models/CardItem";
+interface Data {
+  name: string;
+  description: string;
+  method: string;
+}
 
+interface Item {
+  id: number;
+  name: string;
+  content: string;
+  image: string;
+  percent: number;
+  time: number;
+  timeAgo: string;
+  core: number;
+  price: string;
+  type: string;
+  data: Data[];
+}
 interface Props {
   data: Item[];
 }
@@ -55,9 +72,7 @@ const SlickSlider: FC<Props> = ({ data }) => {
       {data.map((item) => (
         <CardItem item={item} key={item.id} />
       ))}
-      
     </Slider>
-    
   );
 };
 
