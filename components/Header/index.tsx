@@ -25,7 +25,11 @@ import {
 import { SearchIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FC } from "react";
 
-const NavBar: FC = () => {
+interface Props {
+  search?: boolean;
+}
+
+const Header: FC<Props> = ({ search }) => {
   const { isOpen, onToggle, onClose } = useDisclosure();
   return (
     <Box
@@ -41,52 +45,57 @@ const NavBar: FC = () => {
         <Flex mx="30px" display="inline-flex" wrap="wrap">
           <Center>
             <Text size="lg">Logo</Text>
-            <Box
-              alignContent="center"
-              display={{ base: "none", lg: "inline-flex" }}
-            >
-              <SearchIcon
-                ml="30px"
-                my="3px"
-                color="blue.500"
-                display={{ base: "block", xl: "none" }}
-              />
-              <Box ml="30px" my="3px" display={{ base: "none", xl: "block" }}>
-                <InputGroup size="md">
-                  <InputLeftElement>
-                    <SearchIcon color="blue.500" />
-                  </InputLeftElement>
-                  <Input
-                    w="30vw"
-                    pr="4.5rem"
-                    placeholder="APIを検索"
-                    bg="gray.50"
-                    _focus={{ bg: "white" }}
-                  />
-                  <InputRightElement width="4.5rem">
-                    <Button
-                      bg="blue.500"
-                      h="1.75rem"
-                      size="xs"
-                      color="white"
-                      px="40px"
-                      mr="20px"
-                      borderRadius="sm"
-                    >
-                      検索
-                    </Button>
-                  </InputRightElement>
-                </InputGroup>
+            {search ?? (
+              <Box
+                alignContent="center"
+                display={{ base: "none", lg: "inline-flex" }}
+              >
+                <SearchIcon
+                  ml="30px"
+                  my="3px"
+                  color="blue.500"
+                  display={{ base: "block", xl: "none" }}
+                />
+
+                <Box ml="30px" my="3px" display={{ base: "none", xl: "block" }}>
+                  <InputGroup size="md">
+                    <InputLeftElement>
+                      <SearchIcon color="blue.500" />
+                    </InputLeftElement>
+                    <Input
+                      w="30vw"
+                      pr="4.5rem"
+                      placeholder="APIを検索"
+                      bg="gray.50"
+                      _focus={{ bg: "white" }}
+                    />
+                    <InputRightElement width="4.5rem">
+                      <Button
+                        bg="blue.500"
+                        h="1.75rem"
+                        size="xs"
+                        color="white"
+                        px="40px"
+                        mr="20px"
+                        borderRadius="sm"
+                      >
+                        検索
+                      </Button>
+                    </InputRightElement>
+                  </InputGroup>
+                </Box>
+
+                <Link mx="30px" color="blue.500" alignSelf="center">
+                  カテゴリー
+                </Link>
               </Box>
-              <Link mx="30px" color="blue.500" alignSelf="center">
-                <a href="#">カテゴリー</a>
-              </Link>
-            </Box>
+            )}
           </Center>
         </Flex>
         <Spacer />
         <Flex display={{ base: "none", lg: "inline-flex" }} mx="30px">
           <Stack
+            marginTop="3px"
             spacing={8}
             align="center"
             justify={"flex-end"}
@@ -237,5 +246,4 @@ const NavBar: FC = () => {
     </Box>
   );
 };
-
-export default NavBar;
+export default Header;

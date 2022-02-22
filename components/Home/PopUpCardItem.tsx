@@ -45,24 +45,24 @@ const PopUpCardItem: FC<Props> = ({ item, ml, trigger }) => {
       <PopoverContent border="0" width="320px" bgColor="white" ml={ml}>
         <PopoverArrow />
         <Box p={5} zIndex="10" borderWidth="2px" borderRadius="md">
-          {item.data.map((data) => (
-            <>
+          {item.data.map((data, index) => (
+            <div key={index}>
               <Text
                 fontSize="xs"
                 fontWeight="bold"
-                key={item.data.indexOf(data)}
                 color={data.method === "POST" ? "blue.500" : "green.500"}
+                display="inline"
               >
                 {data.method}
-                <Text color="gray.500" fontWeight="normal" display="inline">
-                  {" " + data.name}
-                </Text>
+              </Text>
+              <Text color="gray.500" fontSize="xs" display="inline">
+                {" " + data.name}
               </Text>
               <Text fontSize="xs" m="5px" isTruncated>
                 {data.description}
               </Text>
               <hr />
-            </>
+            </div>
           ))}
           <Button bgColor="blue.50" color="blue.500" my="5px" size="xs">
             {item.type}

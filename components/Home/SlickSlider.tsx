@@ -1,7 +1,7 @@
 import Slider from "react-slick";
-import "react-multi-carousel/lib/styles.css";
 import CardItem from "./CardItem";
 import { FC } from "react";
+import { FiChevronLeft } from "react-icons/fi";
 interface Data {
   name: string;
   description: string;
@@ -23,9 +23,10 @@ interface Item {
 }
 interface Props {
   data: Item[];
+  showIcon?: boolean;
 }
 
-const SlickSlider: FC<Props> = ({ data }) => {
+const SlickSlider: FC<Props> = ({ data, showIcon }) => {
   const settings = {
     dots: false,
     infinite: false,
@@ -34,11 +35,10 @@ const SlickSlider: FC<Props> = ({ data }) => {
     slidesToScroll: 3,
     responsive: [
       {
-        breakpoint: 1200,
+        breakpoint: 1300,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          infinite: true,
         },
       },
       {
@@ -46,11 +46,10 @@ const SlickSlider: FC<Props> = ({ data }) => {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 780,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -58,7 +57,7 @@ const SlickSlider: FC<Props> = ({ data }) => {
         },
       },
       {
-        breakpoint: 576,
+        breakpoint: 580,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -70,7 +69,7 @@ const SlickSlider: FC<Props> = ({ data }) => {
   return (
     <Slider {...settings} className="mt-3">
       {data.map((item) => (
-        <CardItem item={item} key={item.id} />
+        <CardItem item={item} key={item.id} showIcon={showIcon} />
       ))}
     </Slider>
   );

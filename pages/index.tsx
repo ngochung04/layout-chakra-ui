@@ -1,11 +1,10 @@
 import { Menu } from "@chakra-ui/react";
 import type { NextPage } from "next";
 import Head from "next/head";
-import NavBar from "./NavBar";
-import Search from "./Search";
-import MenuPage from "./MenuPage";
-import Footer from "./Footer";
-// import styles from "../styles/Home.module.css";
+import Header from "../components/Header";
+import Search from "../components/Home/Search";
+import MenuPage from "../containers/Home/MenuPage";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -31,7 +30,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <NavBar />
+        <Header search={true} />
         <Search />
         <MenuPage />
       </main>

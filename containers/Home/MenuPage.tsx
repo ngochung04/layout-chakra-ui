@@ -1,8 +1,16 @@
-import { Text, Box, Image, Button, Flex, Link } from "@chakra-ui/react";
-import { Container, Row, Col, Stack } from "react-bootstrap";
+import {
+  Container,
+  Text,
+  Box,
+  Image,
+  Button,
+  Flex,
+  Link,
+} from "@chakra-ui/react";
+import { Row, Col, Stack } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import SlickSlider from "../components/ListPage/SlickSlider";
+import SlickSlider from "../../components/Home/SlickSlider";
 
 const data1 = [
   {
@@ -555,30 +563,32 @@ const MenuPage = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 3000, min: 3000 },
+      breakpoint: { max: 3000, min: 1300 },
       items: 4,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+      breakpoint: { max: 1300, min: 1024 },
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
+      breakpoint: { max: 1024, min: 580 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 580, min: 0 },
       items: 1,
     },
   };
 
   return (
     <>
-      <Container>
+      <Container maxW="container.xl">
         <Row className="mt-3">
-          <Col xs={6} md={3} className="d-none d-md-block">
-            <Stack>
-              <Text color="blue.500">カテゴリー</Text>
+          <Col md={2} className="d-none d-md-block">
+            <Stack gap={2}>
+              <Text color="gray.700" fontWeight="bold" mt="0.5rem">
+                カテゴリー
+              </Text>
               <Text color="blue.500">データ</Text>
               <Text color="blue.500">スポーツ</Text>
               <Text color="blue.500">ファイナンス</Text>
@@ -587,14 +597,22 @@ const MenuPage = () => {
               <Text color="blue.500">全てのカテゴリー</Text>
             </Stack>
           </Col>
-          <Col xs={12} md={1} className="d-none d-md-block">
-            <img src="https://api.rakuten.net/static-assets/rakuten/magnifying-glass.svg" />
+          <Col md={1}>
+            <Image
+              alt="icon"
+              src="https://api.rakuten.net/static-assets/rakuten/magnifying-glass.svg"
+            />
           </Col>
-          <Col xs={12} md={8}>
+          <Col xs={12} md={9}>
             <Text color={"blue.800"} fontSize={"4xl"} fontWeight="bold">
               最新の API を確認
             </Text>
-            <Text color={"blue.800"} fontSize={"1xl"} fontWeight="bold">
+            <Text
+              color={"blue.800"}
+              fontSize={"1xl"}
+              fontWeight="bold"
+              mb="2rem"
+            >
               アプリケーション実装にあたり事例集を確認する
             </Text>
             <Carousel responsive={responsive} autoPlay={false}>
@@ -603,18 +621,23 @@ const MenuPage = () => {
                 borderWidth="1px"
                 borderRadius="lg"
                 overflow="hidden"
+                mx="0.5rem"
+                mb="0.5rem"
               >
                 <Image
                   src="https://d12sqxodahk3ac.cloudfront.net/collections/29dca674-d783-41a2-9bd7-aa17a2c8eb5c.jpg"
                   alt="preview"
                   objectFit={"cover"}
                   w="100%"
-                  h="150px"
+                  h="8rem"
                 />
 
-                <Box p="6">コロナウィルス COVID-19 API</Box>
+                <Box p="6" fontSize="sm" h="5rem">
+                  コロナウィルス COVID-19 API
+                </Box>
               </Box>
               <Box
+                mx="0.5rem"
                 maxW="sm"
                 borderWidth="1px"
                 borderRadius="lg"
@@ -625,12 +648,15 @@ const MenuPage = () => {
                   alt="preview"
                   objectFit={"cover"}
                   w="100%"
-                  h="150px"
+                  h="8rem"
                 />
 
-                <Box p="6">企業情報検索API</Box>
+                <Box p="6" fontSize="sm" h="5rem">
+                  企業情報検索API
+                </Box>
               </Box>
               <Box
+                mx="0.5rem"
                 maxW="sm"
                 borderWidth="1px"
                 borderRadius="lg"
@@ -641,12 +667,15 @@ const MenuPage = () => {
                   alt="preview"
                   objectFit={"cover"}
                   w="100%"
-                  h="150px"
+                  h="8rem"
                 />
 
-                <Box p="6">画像処理・顔認識APIランキング</Box>
+                <Box p="6" fontSize="sm" h="5rem">
+                  画像処理・顔認識APIランキング
+                </Box>
               </Box>
               <Box
+                mx="0.5rem"
                 maxW="sm"
                 borderWidth="1px"
                 borderRadius="lg"
@@ -657,22 +686,24 @@ const MenuPage = () => {
                   alt="preview"
                   objectFit={"cover"}
                   w="100%"
-                  h="150px"
+                  h="8rem"
                 />
 
-                <Box p="6">コロナウィルス COVID-19 API</Box>
+                <Box p="6" fontSize="sm" h="5rem">
+                  コロナウィルス COVID-19 API
+                </Box>
               </Box>
             </Carousel>
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container maxW="container.xl">
         <Row className="mt-3">
           <Text fontSize={"2xl"}>ナビタイムジャパン API コレクション</Text>
           <Text fontSize={"md"}>
             経路探索エンジンの技術で業界をけん引するナビタイムジャパンのAPIを集めたコレクションです。
           </Text>
-          <SlickSlider data={data1} />
+          <SlickSlider data={data1} showIcon={true} />
           <Link>
             <Text fontSize="sm" align="right" color="blue.500" mb="10px">
               その他 {">"}
@@ -680,7 +711,7 @@ const MenuPage = () => {
           </Link>
         </Row>
       </Container>
-      <Container>
+      <Container maxW="container.xl">
         <Row className="mt-3">
           <Text fontSize={"2xl"}>人気のAPI</Text>
           <Text fontSize={"md"}>
@@ -694,7 +725,7 @@ const MenuPage = () => {
           </Link>
         </Row>
       </Container>
-      <Container>
+      <Container maxW="container.xl">
         <Row className="mt-3">
           <Text fontSize={"2xl"}>無料で利用可能なAPI</Text>
           <Text fontSize={"md"}>
@@ -708,19 +739,19 @@ const MenuPage = () => {
           </Link>
         </Row>
       </Container>
-      <Container>
+      <Container maxW="container.xl">
         <Row className="mt-3">
           <Text fontSize={"2xl"}>天気予報​API​ランキング</Text>
           <Text fontSize={"md"}>
             過去の天気から最新の予報まで、200b気象情報を教えてくれるAPIをご紹介します。
           </Text>
           <SlickSlider data={data3} />
-          <Link>
-            <Text fontSize="sm" align="right" color="blue.500" mb="10px">
-              その他 {">"}
-            </Text>
-          </Link>
         </Row>
+        <Link>
+          <Text fontSize="sm" align="right" color="blue.500" mb="10px">
+            その他 {">"}
+          </Text>
+        </Link>
       </Container>
       <Flex justifyContent="center">
         <Button
