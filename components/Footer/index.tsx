@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer>
       <Box bgColor={"#133154"} maxW="100%" p={5}>
-        <Container maxW="container.lg">
+        <Container maxW="container.xl">
           <Flex direction="column" mb="5rem">
             <HStack
               alignItems="flex-start"

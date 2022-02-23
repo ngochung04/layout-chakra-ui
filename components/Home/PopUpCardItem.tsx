@@ -32,17 +32,18 @@ interface Item {
 }
 interface Props {
   item: Item;
-  ml: number;
+  ml?: number;
+  mt?: number;
   trigger: any;
 }
 
 import { FC } from "react";
-const PopUpCardItem: FC<Props> = ({ item, ml, trigger }) => {
+const PopUpCardItem: FC<Props> = ({ item, ml, trigger, mt }) => {
   return (
     <Popover trigger="hover" placement="right">
       <PopoverTrigger>{trigger}</PopoverTrigger>
 
-      <PopoverContent border="0" width="320px" bgColor="white" ml={ml}>
+      <PopoverContent border="0" width="320px" bgColor="white" ml={ml} mt={mt}>
         <PopoverArrow />
         <Box p={5} zIndex="10" borderWidth="2px" borderRadius="md">
           {item.data.map((data, index) => (

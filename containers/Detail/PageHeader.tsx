@@ -20,14 +20,15 @@ import TabHeader from "./TabHeader";
 const PageHeader: FC = () => {
   return (
     <>
-      <Box bg="white" mt="1" pb="3">
+      <Box bg="white">
         <Container maxWidth="container.xl">
-          <Flex>
-            <Flex position="static">
+          <Flex direction={{ base: "column", xl: "row" }}>
+            <Flex alignItems="center" mx="1rem">
               <Image
                 src="https://rapidapi-prod-apis.s3.amazonaws.com/a3/b32870371111e98fa4f768e3b3776c/1017853ad6caff0e4486825248299cad.png"
                 alt="logo"
                 w="60px"
+                h="60px"
               />
               <VStack alignItems="baseline" mx="10px">
                 <HStack>
@@ -43,12 +44,12 @@ const PageHeader: FC = () => {
                     開発者
                     <Link color="blue.500">googlecloud</Link>
                   </Text>
-                  <Divider orientation="vertical" />
+
                   <Text fontSize="sm" color="gray.500">
-                    更新日 5ヶ月前
+                    {"| "}更新日 5ヶ月前
                   </Text>
-                  <Divider orientation="vertical" />
                   <Text fontSize="sm" color="gray.500">
+                    {"| "}
                     <Link color="blue.500">テキスト解析</Link>
                   </Text>
                 </HStack>
@@ -56,7 +57,7 @@ const PageHeader: FC = () => {
             </Flex>
             <Spacer />
             {/*  */}
-            <Flex display={{ base: "none", lg: "inline-flex" }}>
+            <Flex mx="3rem" mt="1.5rem">
               <Flex
                 mx="5px"
                 direction="column"
@@ -77,7 +78,7 @@ const PageHeader: FC = () => {
                   </Text>
                 </Box>
                 <Box>
-                  <Text fontSize="4xl">9.9 / 10</Text>
+                  <Text fontSize="4xl">9.9/10</Text>
                 </Box>
               </Flex>
               <Divider orientation="vertical" borderColor="gray.300" />

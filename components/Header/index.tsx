@@ -44,7 +44,12 @@ const Header: FC<Props> = ({ search }) => {
       <Flex>
         <Flex mx="30px" display="inline-flex" wrap="wrap">
           <Center>
-            <Text size="lg">Logo</Text>
+            {/* <Text size="lg">Logo</Text> */}
+            <Image
+              src="https://api.rakuten.net/static-assets/rakuten/rakuten_logo.svg"
+              alt="Rakuten"
+              h="2.15rem"
+            />
             {search ?? (
               <Box
                 alignContent="center"
@@ -106,28 +111,36 @@ const Header: FC<Props> = ({ search }) => {
               href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
-              <Text display="block">組織登録</Text>
+              <Text display="block" fontSize="xs">
+                組織登録
+              </Text>
             </Link>
 
             <Link
               href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
-              <Text display="block">APIを追加</Text>
+              <Text display="block" fontSize="xs">
+                APIを追加
+              </Text>
             </Link>
 
             <Link
               href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
-              <Text display="block">ドキュメント</Text>
+              <Text display="block" fontSize="xs">
+                ドキュメント
+              </Text>
             </Link>
 
             <Link
               href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
-              <Text display="block">ログイン</Text>
+              <Text display="block" fontSize="xs">
+                ログイン
+              </Text>
             </Link>
 
             <Button
@@ -155,9 +168,14 @@ const Header: FC<Props> = ({ search }) => {
             <DrawerHeader borderBottomWidth="1px" px={30} py={0}>
               <HStack justify={"space-between"} h={50}>
                 {/* Logo */}
-                <Text fontSize="lg" fontWeight="bold">
+                {/* <Text fontSize="lg" fontWeight="bold">
                   Logo
-                </Text>
+                </Text> */}
+                <Image
+                  src="https://api.rakuten.net/static-assets/rakuten/rakuten_logo.svg"
+                  alt="Rakuten"
+                  h="2.15rem"
+                />
 
                 {/* Menu */}
                 <Box display={{ base: "block", lg: "none" }}>
@@ -178,7 +196,7 @@ const Header: FC<Props> = ({ search }) => {
             </DrawerHeader>
 
             <DrawerBody px={0}>
-              <Grid columnGap={16}>
+              <Grid columnGap={10}>
                 <Link
                   href="#"
                   h={50}
@@ -230,8 +248,6 @@ const Header: FC<Props> = ({ search }) => {
                 <Button
                   bgColor="orange"
                   borderRadius={0}
-                  h={50}
-                  // w="100%"
                   _hover={{ background: "orange.200" }}
                 >
                   <Text display="block" color={"white"}>

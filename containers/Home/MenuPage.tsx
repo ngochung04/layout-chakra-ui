@@ -753,15 +753,15 @@ const MenuPage = () => {
           </Text>
         </Link>
       </Container>
-      <Flex justifyContent="center">
+      <Flex justifyContent="center" mb="3rem">
         <Button
-          px="100px"
-          fontSize="xs"
+          px="9rem"
+          fontSize="sm"
           size="sm"
           borderRadius="xs"
           border="1px"
-          borderColor="gray.500"
-          fontWeight="light"
+          borderColor="gray.200"
+          fontWeight="medium"
           bgColor="white"
           _hover={{ color: "blue.500", borderColor: "blue.500" }}
         >

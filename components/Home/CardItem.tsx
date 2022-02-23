@@ -43,7 +43,7 @@ const CardItem: FC<Props> = ({ item, showIcon = false }) => {
     <Box
       w="95%"
       h={200}
-      mx={5}
+      mr={5}
       my={10}
       key={item.id}
       borderWidth="1px"
