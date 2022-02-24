@@ -1,7 +1,6 @@
 import Slider from "react-slick";
 import CardItem from "./CardItem";
 import { FC } from "react";
-import { FiChevronLeft } from "react-icons/fi";
 interface Data {
   name: string;
   description: string;
@@ -30,6 +29,8 @@ const SlickSlider: FC<Props> = ({ data, showIcon }) => {
   const settings = {
     dots: false,
     infinite: false,
+    nextArrow: <></>,
+    prevArrow: <></>,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,

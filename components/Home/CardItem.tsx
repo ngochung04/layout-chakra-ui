@@ -35,13 +35,14 @@ interface Item {
 }
 interface Props {
   item: Item;
+  width?: string;
   showIcon?: boolean;
 }
 
-const CardItem: FC<Props> = ({ item, showIcon = false }) => {
+const CardItem: FC<Props> = ({ width = "95%", item, showIcon = false }) => {
   return (
     <Box
-      w="95%"
+      w={width}
       h={200}
       mr={5}
       my={10}
@@ -50,7 +51,7 @@ const CardItem: FC<Props> = ({ item, showIcon = false }) => {
       borderRadius="lg"
       position="relative"
       // bgColor="blackAlpha.50"
-      shadow="#f0f0f0"
+      boxShadow="md"
     >
       <Link
         href="/detail"
@@ -89,7 +90,7 @@ const CardItem: FC<Props> = ({ item, showIcon = false }) => {
           ml={-1}
           item={item}
           trigger={
-            <Text px="2" wordBreak={"break-word"} fontSize="sm">
+            <Text px="2" h="7rem" wordBreak={"revert"} fontSize="sm">
               {item.content}
             </Text>
           }
@@ -111,7 +112,7 @@ const CardItem: FC<Props> = ({ item, showIcon = false }) => {
                 alt="..."
                 htmlWidth="15px"
               />
-              <Text fontSize="small">{item.core}</Text>
+              <Text fontSize="small">{item.core ? item.core : "-"}</Text>
             </Flex>
           </Tooltip>
           <Tooltip label="過去30日間の平均レイテンシ" bgColor="gray.800">
@@ -123,7 +124,9 @@ const CardItem: FC<Props> = ({ item, showIcon = false }) => {
                 alt="..."
                 htmlWidth="15px"
               />
-              <Text fontSize="small">{item.time}ms</Text>
+              <Text fontSize="small">
+                {item.time ? item.time + "ms" : "- "}
+              </Text>
             </Flex>
           </Tooltip>
           <Tooltip label="過去30日間の平均正常稼働率" bgColor="gray.800">
@@ -135,7 +138,9 @@ const CardItem: FC<Props> = ({ item, showIcon = false }) => {
                 alt="..."
                 htmlWidth="15px"
               />
-              <Text fontSize="small">{item.percent}%</Text>
+              <Text fontSize="small" mr="1rem">
+                {item.percent ? item.percent + "%" : "-"}
+              </Text>
             </Flex>
           </Tooltip>
         </Flex>

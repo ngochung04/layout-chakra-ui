@@ -64,7 +64,7 @@ const Search = () => {
     ],
   };
   return (
-    <div>
+    <>
       <Box
         bg={
           "url(https://api.rakuten.net/static-assets/rakuten/homepage-hero-v3.svg) center top / 1920px no-repeat;"
@@ -129,7 +129,7 @@ const Search = () => {
           </InputGroup>
         </Flex>
         <Flex
-          w="3xl"
+          w={{ md: "3xl" }}
           mt="1rem"
           mb="3rem"
           color={"rgb(74, 144, 226)"}
@@ -204,7 +204,7 @@ const Search = () => {
           </Container>
         </Flex>
       </Box>
-    </div>
+    </>
   );
 };
 

@@ -135,41 +135,45 @@ const Footer = () => {
             </HStack>
           </Flex>
           <Divider />
-          <HStack justifyContent="space-between">
-            <Link color={"gray.400"} fontSize="small">
+
+          {/* Coppyright */}
+          <HStack>
+            <Link color={"gray.400"} fontSize="small" display="inline">
               © 2020 R Software, Inc.,Rakuten, Inc. All rights reserved.
             </Link>
-            <HStack justifyContent="space-between">
-              <Link color={"gray.400"} p="2" fontSize="xs">
-                利用規約
-              </Link>
-              <Link color={"gray.400"} p="2" fontSize="xs">
-                プライバシーポリシー
-              </Link>
-            </HStack>
             <HStack>
-              <Link color={"gray.400"} p="2" fontSize="xs">
-                English
-              </Link>
-              <Link color={"gray.400"} p="2" fontSize="xs">
-                日本語
-              </Link>
-            </HStack>
-            <Spacer />
-            <HStack>
-              <Spacer />
-              <Image
-                src="https://api.rakuten.net/static-assets/rakuten/facebook.svg"
-                alt="..."
-              />
-              <Image
-                src="https://api.rakuten.net/static-assets/rakuten/twitter.svg"
-                alt="..."
-              />
-              <Image
-                src="https://api.rakuten.net/static-assets/rakuten/linked-in.svg"
-                alt="..."
-              />
+              <HStack justifyContent="space-between">
+                <Link color={"gray.400"} p="2" fontSize="xs">
+                  利用規約
+                </Link>
+                <Link color={"gray.400"} p="2" fontSize="xs">
+                  プライバシーポリシー
+                </Link>
+              </HStack>
+              <HStack>
+                <Link color={"gray.400"} p="2" fontSize="xs">
+                  English
+                </Link>
+                <Link color={"gray.400"} p="2" fontSize="xs">
+                  日本語
+                </Link>
+              </HStack>
+
+              {/* <HStack>
+                <Spacer />
+                <Image
+                  src="https://api.rakuten.net/static-assets/rakuten/facebook.svg"
+                  alt="..."
+                />
+                <Image
+                  src="https://api.rakuten.net/static-assets/rakuten/twitter.svg"
+                  alt="..."
+                />
+                <Image
+                  src="https://api.rakuten.net/static-assets/rakuten/linked-in.svg"
+                  alt="..."
+                />
+              </HStack> */}
             </HStack>
           </HStack>
         </Container>
