@@ -11,7 +11,7 @@ import { FiSearch } from "react-icons/fi";
 
 const TabThree = () => {
   return (
-    <Container maxW="container.xl" mx={-3}>
+    <Container maxW="container.xl" px="2rem">
       <Box>
         <Text fontSize="2xl" mt="1rem">
           チュートリアル

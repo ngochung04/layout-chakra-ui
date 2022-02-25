@@ -10,7 +10,7 @@ import {
 import { Row, Col, Stack } from "react-bootstrap";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import SlickSlider from "../../components/Home/SlickSlider";
+import SlickSlider from "../../components/home/SlickSlider";
 
 const data1 = [
   {

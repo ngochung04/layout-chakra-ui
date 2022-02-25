@@ -1,5 +1,4 @@
-import Question from "../../../components/Detail/TabFive/Question";
-import { useDisclosure } from "@chakra-ui/react";
+import Question from "../../../components/detail/tab-five/Question";
 const Questions = () => {
   const questions = [
     {

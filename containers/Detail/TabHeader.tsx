@@ -7,6 +7,7 @@ import {
   Divider,
   Container,
   Text,
+  Box,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import TabFive from "./TabFive";
@@ -29,7 +30,7 @@ const TabHeader: FC = () => {
         </Container>
       </TabList>
       <Divider />
-      <Container maxW="container.xl">
+      <Box>
         <TabPanels>
           <TabPanel>
             <TabOne />
@@ -47,7 +48,7 @@ const TabHeader: FC = () => {
             <TabFive />
           </TabPanel>
         </TabPanels>
-      </Container>
+      </Box>
     </Tabs>
   );
 };

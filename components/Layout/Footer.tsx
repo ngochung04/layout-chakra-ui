@@ -137,45 +137,40 @@ const Footer = () => {
           <Divider />
 
           {/* Coppyright */}
-          <HStack>
-            <Link color={"gray.400"} fontSize="small" display="inline">
+          <Flex direction={{ base: "column", md: "row" }}>
+            <Text color={"gray.400"} fontSize="small" display="inline">
               © 2020 R Software, Inc.,Rakuten, Inc. All rights reserved.
-            </Link>
-            <HStack>
-              <HStack justifyContent="space-between">
-                <Link color={"gray.400"} p="2" fontSize="xs">
-                  利用規約
-                </Link>
-                <Link color={"gray.400"} p="2" fontSize="xs">
-                  プライバシーポリシー
-                </Link>
-              </HStack>
-              <HStack>
-                <Link color={"gray.400"} p="2" fontSize="xs">
-                  English
-                </Link>
-                <Link color={"gray.400"} p="2" fontSize="xs">
-                  日本語
-                </Link>
-              </HStack>
-
-              {/* <HStack>
-                <Spacer />
-                <Image
-                  src="https://api.rakuten.net/static-assets/rakuten/facebook.svg"
-                  alt="..."
-                />
-                <Image
-                  src="https://api.rakuten.net/static-assets/rakuten/twitter.svg"
-                  alt="..."
-                />
-                <Image
-                  src="https://api.rakuten.net/static-assets/rakuten/linked-in.svg"
-                  alt="..."
-                />
-              </HStack> */}
-            </HStack>
-          </HStack>
+            </Text>
+            <Box justifyContent="center">
+              <Link color={"gray.400"} p="2" fontSize="xs">
+                利用規約
+              </Link>
+              <Link color={"gray.400"} p="2" fontSize="xs">
+                プライバシーポリシー
+              </Link>
+              <Link color={"gray.400"} p="2" fontSize="xs">
+                English
+              </Link>
+              <Link color={"gray.400"} p="2" fontSize="xs">
+                日本語
+              </Link>
+            </Box>
+            <Spacer />
+            <Flex>
+              <Image
+                src="https://api.rakuten.net/static-assets/rakuten/facebook.svg"
+                alt="..."
+              />
+              <Image
+                src="https://api.rakuten.net/static-assets/rakuten/twitter.svg"
+                alt="..."
+              />
+              <Image
+                src="https://api.rakuten.net/static-assets/rakuten/linked-in.svg"
+                alt="..."
+              />
+            </Flex>
+          </Flex>
         </Container>
       </Box>
     </footer>

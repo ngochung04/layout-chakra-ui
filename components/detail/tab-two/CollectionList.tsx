@@ -9,7 +9,8 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import CardItem from "../../Home/CardItem";
+import Slider from "react-slick";
+import CardItem from "../../home/CardItem";
 const CollectionList = () => {
   const data = [
     {
@@ -225,11 +226,16 @@ const CollectionList = () => {
       <Link color="blue.500" display="inline">
         すべて表示
       </Link>
-      <Flex className="mt-3">
+      {/* <Flex className="mt-3">
         {data2.map((item) => (
           <CardItem item={item} width="15rem" key="item.id" />
         ))}
-      </Flex>
+      </Flex> */}
+      {/* <Flex className="mt-3">
+        {data2.map((item) => (
+          <CardItem item={item} width="15rem" key="item.id" />
+        ))}
+      </Flex> */}
       <Box mb="2rem">
         <Text>評価</Text>
         <HStack>

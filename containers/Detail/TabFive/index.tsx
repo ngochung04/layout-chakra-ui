@@ -1,8 +1,8 @@
 import { Box, Text, Flex, Container } from "@chakra-ui/react";
 import Questions from "./Questions";
-import Table from "../../../components/Detail/TabFive/Table";
-import PlatForm from "../../../components/Detail/TabFive/PlatForm";
-import Dashboard from "../../../components/Detail/TabFive/Dashboard";
+import Table from "../../../components/detail/tab-five/Table";
+import PlatForm from "../../../components/detail/tab-five/PlatForm";
+import Dashboard from "../../../components/detail/tab-five/Dashboard";
 const TabFive = () => {
   const settingBox = {
     border: "1px",

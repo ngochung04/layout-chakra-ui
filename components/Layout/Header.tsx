@@ -21,6 +21,7 @@ import {
   useDisclosure,
   Grid,
   IconButton,
+  LinkOverlay,
 } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FC } from "react";
@@ -45,12 +46,14 @@ const Header: FC<Props> = ({ search }) => {
         <Flex mx="30px" display="inline-flex" wrap="wrap">
           <Center>
             {/* <Text size="lg">Logo</Text> */}
-            <Image
-              src="https://api.rakuten.net/static-assets/rakuten/rakuten_logo.svg"
-              alt="Rakuten"
-              h="2.15rem"
-            />
-            {search ?? (
+            <Link href="/">
+              <Image
+                src="https://api.rakuten.net/static-assets/rakuten/rakuten_logo.svg"
+                alt="Rakuten"
+                h="2.15rem"
+              />
+            </Link>
+            {search ? (
               <Box
                 alignContent="center"
                 display={{ base: "none", lg: "inline-flex" }}
@@ -94,7 +97,7 @@ const Header: FC<Props> = ({ search }) => {
                   カテゴリー
                 </Link>
               </Box>
-            )}
+            ) : null}
           </Center>
         </Flex>
         <Spacer />
@@ -165,8 +168,8 @@ const Header: FC<Props> = ({ search }) => {
         />
         <Drawer placement="top" onClose={onClose} isOpen={isOpen}>
           <DrawerContent display={{ base: "block", lg: "none" }}>
-            <DrawerHeader borderBottomWidth="1px" px={30} py={0}>
-              <HStack justify={"space-between"} h={50}>
+            <DrawerHeader borderBottomWidth="1px" py={0}>
+              <HStack h={50}>
                 {/* Logo */}
                 {/* <Text fontSize="lg" fontWeight="bold">
                   Logo
@@ -176,7 +179,7 @@ const Header: FC<Props> = ({ search }) => {
                   alt="Rakuten"
                   h="2.15rem"
                 />
-
+                <Spacer />
                 {/* Menu */}
                 <Box display={{ base: "block", lg: "none" }}>
                   <IconButton
@@ -190,6 +193,7 @@ const Header: FC<Props> = ({ search }) => {
                     }
                     variant={"ghost"}
                     aria-label={"Toggle Navigation"}
+                    mr="-1.25rem"
                   />
                 </Box>
               </HStack>

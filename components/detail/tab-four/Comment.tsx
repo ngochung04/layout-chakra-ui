@@ -27,7 +27,7 @@ const Comment: FC<Props> = ({ item }) => {
         <Grid templateRows="repeat(3, 1fr)" templateColumns="repeat(22, 1fr)">
           <GridItem rowSpan={3} colSpan={1} p="0.25rem" px="0.5rem">
             <Avatar
-              size="sm"
+              // size="sm"
               src={item.avatar}
               border="1px"
               borderColor="gray.300"

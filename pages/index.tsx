@@ -1,10 +1,9 @@
-import { Menu } from "@chakra-ui/react";
 import type { NextPage } from "next";
+
+import Search from "../components/home/Search";
+import MenuPage from "../containers/home/MenuPage";
+import Layout from "../components/Layout";
 import Head from "next/head";
-import Header from "../components/Header";
-import Search from "../components/Home/Search";
-import MenuPage from "../containers/Home/MenuPage";
-import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
   return (
@@ -32,15 +31,10 @@ const Home: NextPage = () => {
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         />
       </Head>
-
-      <main>
-        <Header search={true} />
+      <Layout search={false}>
         <Search />
         <MenuPage />
-      </main>
-      <br />
-
-      <Footer />
+      </Layout>
     </>
   );
 };

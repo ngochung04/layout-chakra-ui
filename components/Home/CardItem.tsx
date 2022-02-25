@@ -5,11 +5,7 @@ import {
   HStack,
   Tooltip,
   Flex,
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverArrow,
-  Link,
+  LinkOverlay,
 } from "@chakra-ui/react";
 import { FC } from "react";
 import PopUpCardItem from "./PopUpCardItem";
@@ -53,7 +49,7 @@ const CardItem: FC<Props> = ({ width = "95%", item, showIcon = false }) => {
       // bgColor="blackAlpha.50"
       boxShadow="md"
     >
-      <Link
+      <LinkOverlay
         href="/detail"
         _hover={{ textDecoration: "none", color: "gray.800" }}
       >
@@ -144,7 +140,7 @@ const CardItem: FC<Props> = ({ width = "95%", item, showIcon = false }) => {
             </Flex>
           </Tooltip>
         </Flex>
-      </Link>
+      </LinkOverlay>
     </Box>
   );
 };

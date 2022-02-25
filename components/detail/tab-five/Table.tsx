@@ -61,7 +61,7 @@ const Table = () => {
           </Text>
         </Box>
       </Box>
-      <Box>
+      <Box display={{ base: "none", md: "block" }}>
         <Box {...settingBox} h="15rem">
           <VStack>
             <Text fontSize="2xl" color="gray.600" mt="1rem">
@@ -97,7 +97,7 @@ const Table = () => {
           </Text>
         </Box>
       </Box>
-      <Box>
+      <Box display={{ base: "none", lg: "block" }}>
         <Box {...settingBox} h="15rem">
           <VStack>
             <Text fontSize="2xl" color="gray.600" mt="1rem">
@@ -132,7 +132,7 @@ const Table = () => {
           </Text>
         </Box>
       </Box>
-      <Box>
+      <Box display={{ base: "none", xl: "block" }}>
         <Box {...settingBox} h="15rem">
           <VStack>
             <Text fontSize="2xl" color="gray.600" mt="1rem">

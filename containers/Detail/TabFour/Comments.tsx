@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import Comment from "../../../components/Detail/TabFour/Comment";
+import Comment from "../../../components/detail/tab-four/Comment";
 
 const Comments = () => {
   const comments = [

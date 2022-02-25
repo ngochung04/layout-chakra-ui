@@ -1,10 +1,10 @@
 import { Box, Container, Flex, Text, Image, Divider } from "@chakra-ui/react";
 import Comments from "./Comments";
-import Pagination from "../../../components/Detail/TabFour/Pagination";
+import Pagination from "../../../components/detail/tab-four/Pagination";
 const TabFour = () => {
   return (
     <>
-      <Container maxW="container.xl" mx={-5}>
+      <Container maxW="container.xl" px="2rem">
         <Flex justifyContent="space-between">
           <Box>
             <Text

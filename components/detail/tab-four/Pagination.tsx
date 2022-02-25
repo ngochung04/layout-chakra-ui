@@ -30,9 +30,9 @@ const Name = () => {
         _hover={{ bg: "white" }}
       >
         {isOpen ? (
-          <BiChevronsRight size="sm" color="#4a90e2" />
+          <BiChevronsRight color="#4a90e2" />
         ) : (
-          <BiDotsHorizontalRounded size="sm" />
+          <BiDotsHorizontalRounded />
         )}
       </Button>
 
