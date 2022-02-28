@@ -1,6 +1,8 @@
 import Slider from "react-slick";
 import CardItem from "./CardItem";
 import { FC } from "react";
+import { GrFormNext, GrFormPrevious } from "react-icons/gr";
+
 interface Data {
   name: string;
   description: string;
@@ -29,7 +31,8 @@ const SlickSlider: FC<Props> = ({ data, showIcon }) => {
   const settings = {
     dots: false,
     infinite: false,
-    
+    nextArrow: <GrFormNext />,
+    prevArrow: <GrFormPrevious />,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,

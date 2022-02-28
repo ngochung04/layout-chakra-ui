@@ -1,4 +1,12 @@
-import { Box, Divider, HStack, Image, Link, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Divider,
+  Flex,
+  HStack,
+  Image,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 import SlickSlider from "components/home/SlickSlider";
 const CollectionList = () => {
   const data = [
@@ -252,9 +260,7 @@ const CollectionList = () => {
   return (
     <Box>
       <Text fontSize="lg">googlecloudが提供する他のAPI</Text>
-      <Box>
-        <SlickSlider data={data} />
-      </Box>
+      <SlickSlider data={data} />
       <Divider mb="2rem" />
       <Text display="inline">
         Google Translateを見た開発者は、こんなAPIにも興味を持っています

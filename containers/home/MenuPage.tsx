@@ -703,7 +703,9 @@ const MenuPage = () => {
           <Text fontSize={"md"}>
             経路探索エンジンの技術で業界をけん引するナビタイムジャパンのAPIを集めたコレクションです。
           </Text>
-          <SlickSlider data={data1} showIcon={true} />
+          <Box px="1.125rem">
+            <SlickSlider data={data1} showIcon={true} />
+          </Box>
           <Link>
             <Text fontSize="sm" align="right" color="blue.500" mb="10px">
               その他 {">"}
@@ -717,7 +719,9 @@ const MenuPage = () => {
           <Text fontSize={"md"}>
             Rakuten RapidAPIで利用者数の多い人気のAPIをご紹介します。
           </Text>
-          <SlickSlider data={data2} />
+          <Box px="1.125rem">
+            <SlickSlider data={data2} showIcon={true} />
+          </Box>
           <Link>
             <Text fontSize="sm" align="right" color="blue.500" mb="10px">
               その他 {">"}
@@ -731,7 +735,9 @@ const MenuPage = () => {
           <Text fontSize={"md"}>
             Rakuten RapidAPIで​無料で​利用可能な​APIを​チェックして​みましょう。
           </Text>
-          <SlickSlider data={data3} />
+          <Box px="1.125rem">
+            <SlickSlider data={data3} showIcon={true} />
+          </Box>
           <Link>
             <Text fontSize="sm" align="right" color="blue.500" mb="10px">
               その他 {">"}
@@ -745,7 +751,9 @@ const MenuPage = () => {
           <Text fontSize={"md"}>
             過去の天気から最新の予報まで、200b気象情報を教えてくれるAPIをご紹介します。
           </Text>
-          <SlickSlider data={data3} />
+          <Box px="1.125rem">
+            <SlickSlider data={data3} showIcon={true} />
+          </Box>
         </Row>
         <Link>
           <Text fontSize="sm" align="right" color="blue.500" mb="10px">

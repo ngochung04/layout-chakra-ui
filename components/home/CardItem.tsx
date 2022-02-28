@@ -31,20 +31,13 @@ interface Item {
 }
 interface Props {
   item: Item;
-  width?: string;
   showIcon?: boolean;
   display?: boolean;
 }
 
-const CardItem: FC<Props> = ({
-  item,
-  showIcon = false,
-  display = true,
-  width,
-}) => {
+const CardItem: FC<Props> = ({ item, showIcon = false, display = true }) => {
   return (
     <Box
-      w={width}
       h={200}
       mr={5}
       my={10}
@@ -69,7 +62,7 @@ const CardItem: FC<Props> = ({
                     <Image src={item.image} alt="..." />
                   </Box>
                   <Box w="80%" h="10">
-                    <Text fontSize="md" fontWeight="bold">
+                    <Text fontSize="md" fontWeight="bold" wordBreak="keep-all">
                       {item.name}
                     </Text>
                   </Box>
