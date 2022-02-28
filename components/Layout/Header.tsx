@@ -3,7 +3,6 @@ import {
   Flex,
   Text,
   Image,
-  Link,
   Spacer,
   InputGroup,
   Input,
@@ -25,7 +24,7 @@ import {
 } from "@chakra-ui/react";
 import { SearchIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { FC } from "react";
-
+import Link from "next/link";
 interface Props {
   search?: boolean;
 }
@@ -46,7 +45,7 @@ const Header: FC<Props> = ({ search }) => {
         <Flex mx="30px" display="inline-flex" wrap="wrap">
           <Center>
             {/* <Text size="lg">Logo</Text> */}
-            <Link href="/">
+            <Link href="/" passHref>
               <Image
                 src="https://api.rakuten.net/static-assets/rakuten/rakuten_logo.svg"
                 alt="Rakuten"
@@ -93,9 +92,9 @@ const Header: FC<Props> = ({ search }) => {
                   </InputGroup>
                 </Box>
 
-                <Link mx="30px" color="blue.500" alignSelf="center">
+                <Text mx="30px" color="blue.500" alignSelf="center">
                   カテゴリー
-                </Link>
+                </Text>
               </Box>
             ) : null}
           </Center>
@@ -110,41 +109,41 @@ const Header: FC<Props> = ({ search }) => {
             direction={["column", "row", "row", "row"]}
             pt={[4, 4, 0, 0]}
           >
-            <Link
-              href="#"
+            <Box
+              // href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
               <Text display="block" fontSize="xs">
                 組織登録
               </Text>
-            </Link>
+            </Box>
 
-            <Link
-              href="#"
+            <Box
+              // href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
               <Text display="block" fontSize="xs">
                 APIを追加
               </Text>
-            </Link>
+            </Box>
 
-            <Link
-              href="#"
+            <Box
+              // href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
               <Text display="block" fontSize="xs">
                 ドキュメント
               </Text>
-            </Link>
+            </Box>
 
-            <Link
-              href="#"
+            <Box
+              // href="#"
               _hover={{ textDecoration: "none", color: "blue.200" }}
             >
               <Text display="block" fontSize="xs">
                 ログイン
               </Text>
-            </Link>
+            </Box>
 
             <Button
               bgColor="orange"
@@ -201,8 +200,8 @@ const Header: FC<Props> = ({ search }) => {
 
             <DrawerBody px={0}>
               <Grid columnGap={10}>
-                <Link
-                  href="#"
+                <Box
+                  // href="#"
                   h={50}
                   px={3}
                   py={1}
@@ -211,10 +210,10 @@ const Header: FC<Props> = ({ search }) => {
                   _hover={{ textDecoration: "none", color: "blue.200" }}
                 >
                   <Text textAlign="center">組織登録</Text>
-                </Link>
+                </Box>
 
-                <Link
-                  href="#"
+                <Box
+                  // href="#"
                   h={50}
                   px={3}
                   py={1}
@@ -223,10 +222,10 @@ const Header: FC<Props> = ({ search }) => {
                   _hover={{ textDecoration: "none", color: "blue.200" }}
                 >
                   <Text textAlign="center">APIを追加</Text>
-                </Link>
+                </Box>
 
-                <Link
-                  href="#"
+                <Box
+                  // href="#"
                   h={50}
                   px={3}
                   py={1}
@@ -235,10 +234,10 @@ const Header: FC<Props> = ({ search }) => {
                   _hover={{ textDecoration: "none", color: "blue.200" }}
                 >
                   <Text textAlign="center">ドキュメント</Text>
-                </Link>
+                </Box>
 
-                <Link
-                  href="#"
+                <Box
+                  // href="#"
                   h={50}
                   px={3}
                   py={1}
@@ -247,7 +246,7 @@ const Header: FC<Props> = ({ search }) => {
                   _hover={{ textDecoration: "none", color: "blue.200" }}
                 >
                   <Text textAlign="center">ログイン</Text>
-                </Link>
+                </Box>
 
                 <Button
                   bgColor="orange"

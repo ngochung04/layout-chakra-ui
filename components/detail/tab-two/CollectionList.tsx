@@ -9,8 +9,10 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import { Row } from "react-bootstrap";
 import Slider from "react-slick";
 import CardItem from "../../home/CardItem";
+import SlickSlider from "../../home/SlickSlider";
 const CollectionList = () => {
   const data = [
     {
@@ -210,15 +212,62 @@ const CollectionList = () => {
         },
       ],
     },
+    {
+      id: 5,
+      image:
+        "https://rapidapi-prod-apis.s3.amazonaws.com/c1/15f1be53744a6d98d77a020d769513/1d4767145139c8d08ce11ba951b9e6d0.png",
+      name: "amazon-price",
+      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit",
+      percent: 100,
+      time: 1155,
+      core: 9.1,
+      price: "FREE",
+      timeAgo: "6ヶ月前",
+      type: "Data",
+      data: [
+        {
+          method: "GET",
+          name: "Fetch an Account Resource",
+          description: "上記のプロパティを含むアカウントの表現を返します。",
+        },
+        {
+          method: "GET",
+          name: "Fetch an Account Resource",
+          description: "上記のプロパティを含むアカウントの表現を返します。",
+        },
+        {
+          method: "POST",
+          name: "Fetch an Account Resource",
+          description: "上記のプロパティを含むアカウントの表現を返します。",
+        },
+      ],
+    },
   ];
-
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 3000, min: 1300 },
+      items: 4,
+    },
+    desktop: {
+      breakpoint: { max: 1300, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 580 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 580, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <Box>
       <Text fontSize="lg">googlecloudが提供する他のAPI</Text>
-      <Flex className="mt-3">
-        <CardItem item={data[0]} width="14rem" />
-        <CardItem item={data[1]} width="14rem" />
-      </Flex>
+      <Box>
+        <SlickSlider data={data} />
+      </Box>
       <Divider mb="2rem" />
       <Text display="inline">
         Google Translateを見た開発者は、こんなAPIにも興味を持っています
@@ -226,16 +275,9 @@ const CollectionList = () => {
       <Link color="blue.500" display="inline">
         すべて表示
       </Link>
-      {/* <Flex className="mt-3">
-        {data2.map((item) => (
-          <CardItem item={item} width="15rem" key="item.id" />
-        ))}
-      </Flex> */}
-      {/* <Flex className="mt-3">
-        {data2.map((item) => (
-          <CardItem item={item} width="15rem" key="item.id" />
-        ))}
-      </Flex> */}
+
+      <SlickSlider data={data2} />
+
       <Box mb="2rem">
         <Text>評価</Text>
         <HStack>

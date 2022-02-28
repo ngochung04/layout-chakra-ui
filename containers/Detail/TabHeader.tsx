@@ -20,17 +20,33 @@ import TabTwo from "./TabTwo";
 const TabHeader: FC = () => {
   return (
     <Tabs defaultIndex={0}>
-      <TabList border="0" color="blue.500">
-        <Container maxW="container.xl" display="inline-flex">
-          <Tab>エンドポイント</Tab>
-          <Tab>概要</Tab>
-          <Tab>チュートリアル</Tab>
-          <Tab>ディスカッション</Tab>
-          <Tab>料金プラン</Tab>
+      <TabList
+        borderBottom="1px"
+        w="100%"
+        color="blue.500"
+        mt={{
+          base: "13.25rem",
+          sm: "10.425rem",
+          xl: "6.275rem",
+        }}
+        position="fixed"
+        bg="white"
+        zIndex={100}
+      >
+        <Container
+          fontSize="xl"
+          mx="auto"
+          maxW="container.xl"
+          display="inline-flex"
+        >
+          <Tab wordBreak="keep-all">エンドポイント</Tab>
+          <Tab wordBreak="keep-all">概要</Tab>
+          <Tab wordBreak="keep-all">チュートリアル</Tab>
+          <Tab wordBreak="keep-all">ディスカッション</Tab>
+          <Tab wordBreak="keep-all">料金プラン</Tab>
         </Container>
       </TabList>
-      <Divider />
-      <Box>
+      <Box pt={{ base: "16rem", sm: "14rem", xl: "10rem" }}>
         <TabPanels>
           <TabPanel>
             <TabOne />

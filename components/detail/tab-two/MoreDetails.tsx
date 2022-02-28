@@ -149,10 +149,10 @@ const MoreDetails = () => {
           position="absolute"
           w="7rem"
           bg="blackAlpha.100"
-          h="100%"
+          h="3rem"
           mt={-10}
           bgClip="content-box"
-          bgGradient="linear(to-b ,#fffa 0%, #fff 100%)"
+          bgGradient="linear-gradient(to-b ,#fdfdfd 0%, #ffffff55 80%,  #fff 100%)"
         />
       </UnorderedList>
 

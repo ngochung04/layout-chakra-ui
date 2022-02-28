@@ -25,7 +25,7 @@ const TabFive = () => {
           align="center"
           fontWeight="medium"
           mt="20px"
-          w="50rem"
+          w={{ base: "full", md: "50rem" }}
         >
           RapidAPIは、および使用している他のものを明確に可視化します。複数のキーとサブスクリプションアカウントについて心配する必要はありません
         </Text>

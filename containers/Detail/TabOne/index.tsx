@@ -118,10 +118,18 @@ const TabOne = () => {
           <Text my="2rem">このAPIについて詳しく見る</Text>
         </Link>
       </Container>
-      <Box bg="whitesmoke" mx="-1rem" h="50rem">
-        <Resizeable sizes={[300, 600, 600]}>
+
+      {/* Resizable Component */}
+      <Box mx="-1rem">
+        <Resizeable
+          sizes={[300, 620, 620]}
+          bgs={["whitesmoke"]}
+          h="50rem"
+          mb="-1.5rem"
+        >
+          {/* First Column */}
           <Box bg="whitesmoke">
-            <Box border="1px" borderColor="gray.300" h="4rem">
+            <Box bg="whitesmoke" border="1px" borderColor="gray.300" h="4rem">
               <InputGroup p="0.5rem">
                 <InputLeftElement pt="1rem" pl="1rem">
                   <SearchIcon />
@@ -129,7 +137,7 @@ const TabOne = () => {
                 <Input bg="white" placeholder="エンドポイントの検索" />
               </InputGroup>
             </Box>
-            <Box>
+            <Box bg="whitesmoke">
               {data.map((item, index) => (
                 <Link
                   key={index}
@@ -141,13 +149,19 @@ const TabOne = () => {
               ))}
             </Box>
           </Box>
-          <Box>
+
+          {/* Second Column */}
+
+          <Box overflowY="scroll" h="100vh" position="relative">
             <Flex
+              w="100%"
               bg="whitesmoke"
               border="1px"
               borderColor="gray.300"
               h="4rem"
               alignItems="center"
+              position="absolute"
+              zIndex="10"
             >
               <Box p="0.5rem">
                 <Text
@@ -183,9 +197,12 @@ const TabOne = () => {
             </Flex>
             <Form item={data[selectItem]} />
           </Box>
-          <Box>
+
+          {/* Third Column */}
+
+          <Box bg="whitesmoke">
             <Flex bg="whitesmoke" border="1px" borderColor="gray.300" h="4rem">
-              <Text my="auto"></Text>
+              <Text my="auto">コードスニペット</Text>
             </Flex>
           </Box>
         </Resizeable>

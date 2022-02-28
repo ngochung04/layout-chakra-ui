@@ -20,7 +20,15 @@ import TabHeader from "./TabHeader";
 const PageHeader: FC = () => {
   return (
     <>
-      <Box bg="white">
+      <Box
+        borderBottom="1px"
+        borderColor="gray.300"
+        bg="white"
+        w="100%"
+        mt="-0.25rem"
+        position="fixed"
+        zIndex={100}
+      >
         <Container maxWidth="container.xl">
           <Flex direction={{ base: "column", xl: "row" }}>
             <Flex alignItems="center" mx="1rem">
@@ -32,23 +40,25 @@ const PageHeader: FC = () => {
               />
               <VStack alignItems="baseline" mx="10px">
                 <HStack>
-                  <Text fontSize="xl">Google Translate</Text>
+                  <Text fontSize="xl" wordBreak="keep-all">
+                    Google Translate
+                  </Text>
                   <FiBookmark />
-                  <Badge bg="gray.700" color="white">
+                  <Badge bg="gray.700" wordBreak="keep-all" color="white">
                     フリーミアム
                   </Badge>
                 </HStack>
                 <Spacer />
                 <HStack>
-                  <Text fontSize="sm" color="gray.500">
+                  <Text wordBreak="keep-all" fontSize="sm" color="gray.500">
                     開発者
                     <Link color="blue.500">googlecloud</Link>
                   </Text>
 
-                  <Text fontSize="sm" color="gray.500">
+                  <Text wordBreak="keep-all" fontSize="sm" color="gray.500">
                     {"| "}更新日 5ヶ月前
                   </Text>
-                  <Text fontSize="sm" color="gray.500">
+                  <Text wordBreak="keep-all" fontSize="sm" color="gray.500">
                     {"| "}
                     <Link color="blue.500">テキスト解析</Link>
                   </Text>
@@ -110,7 +120,11 @@ const PageHeader: FC = () => {
                 justifyContent="space-between"
                 mx="5px"
               >
-                <Box textAlign="center" justifyItems="center">
+                <Box
+                  wordBreak="keep-all"
+                  textAlign="center"
+                  justifyItems="center"
+                >
                   <Image
                     verticalAlign="middle"
                     src="https://api.rakuten.net/static-assets/rakuten/success-new.svg"
@@ -119,7 +133,12 @@ const PageHeader: FC = () => {
                     alt="..."
                     htmlWidth="15px"
                   />
-                  <Text fontSize="xs" display="inline" color="gray.500">
+                  <Text
+                    wordBreak="keep-all"
+                    fontSize="xs"
+                    display="inline"
+                    color="gray.500"
+                  >
                     正常稼働率
                   </Text>
                 </Box>

@@ -5,11 +5,13 @@ import { ResizeComponent } from ".";
 
 type Props = {
   sizes: number[];
+  bgs?: string[];
 };
 
 export const Resizeable: React.FC<Props & BoxProps> = ({
   children,
   sizes,
+  bgs,
   ...rest
 }) => {
   const [panels, setPanels] = useState<number[]>(sizes);
@@ -59,6 +61,7 @@ export const Resizeable: React.FC<Props & BoxProps> = ({
               left={0}
               startResize={startResize}
               resizeBox={resizeBox}
+              bg={bgs ? bgs[i] : undefined}
             >
               {child}
             </ResizeComponent>

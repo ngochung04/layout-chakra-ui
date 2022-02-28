@@ -29,8 +29,7 @@ const SlickSlider: FC<Props> = ({ data, showIcon }) => {
   const settings = {
     dots: false,
     infinite: false,
-    nextArrow: <></>,
-    prevArrow: <></>,
+    
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 3,
