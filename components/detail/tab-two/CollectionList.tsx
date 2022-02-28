@@ -9,9 +9,6 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { Row } from "react-bootstrap";
-import Slider from "react-slick";
-import CardItem from "../../home/CardItem";
 import SlickSlider from "../../home/SlickSlider";
 const CollectionList = () => {
   const data = [
