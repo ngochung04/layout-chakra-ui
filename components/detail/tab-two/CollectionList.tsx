@@ -1,14 +1,4 @@
-import {
-  Box,
-  Container,
-  Divider,
-  Flex,
-  HStack,
-  Image,
-  Link,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Divider, HStack, Image, Link, Text } from "@chakra-ui/react";
 import SlickSlider from "../../home/SlickSlider";
 const CollectionList = () => {
   const data = [
